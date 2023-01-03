@@ -121,6 +121,21 @@
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nJN-th-c5K" userLabel="Timer View">
                                         <rect key="frame" x="0.0" y="568.5" width="374" height="245.5"/>
+                                        <subviews>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="9wr-lq-P6b">
+                                                <rect key="frame" x="0.0" y="120" width="374" height="6"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="5" id="qKU-q9-S92"/>
+                                                </constraints>
+                                                <color key="progressTintColor" red="1" green="0.95881346180000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="trackTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </progressView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="9wr-lq-P6b" secondAttribute="trailing" id="MSG-eS-Ebg"/>
+                                            <constraint firstItem="9wr-lq-P6b" firstAttribute="leading" secondItem="nJN-th-c5K" secondAttribute="leading" id="ees-Pt-MlP"/>
+                                            <constraint firstAttribute="bottom" secondItem="9wr-lq-P6b" secondAttribute="bottom" constant="120.5" id="jF9-Tp-E3K"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                             </stackView>
@@ -134,6 +149,10 @@
                             <constraint firstAttribute="trailingMargin" secondItem="wI6-ag-afn" secondAttribute="trailing" id="dky-ZA-Z3J"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="message" destination="XLm-5r-pSP" id="Pbz-KS-fCT"/>
+                        <outlet property="progressBar" destination="9wr-lq-P6b" id="eTG-lK-UI5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
